@@ -1,0 +1,137 @@
+body {
+    font-family: Poppins;
+    background-color: hsl(0, 0%, 98%);
+}
+h2 {
+    font-size: 20px;
+    color: hsl(234, 12%, 34%);
+}
+/* TITLE SECTION */
+.title-section {
+    margin: 5%;
+    text-align: center;
+}
+                 /*******first & last child******/
+.title-section *, .title-section :nth-child(2n+1) {
+    margin: 0;
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+}
+.title-section :nth-child(1) {
+    font-size: 35px;
+}
+.title-section :nth-child(2) {
+    font-weight: 600;
+    font-size: 35px;
+    color: hsl(234, 12%, 34%);
+}
+.title-section p {
+    font-size: 15px;    
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10%;
+    grid-template-areas:
+    ". top ."
+    "left top right"
+    "left bottom right"
+    ". bottom .";
+    row-gap: 30px;
+    column-gap: 30px;
+}
+.features > * {
+    padding: 0 10% 5%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 3px 10px hsl(229, 6%, 66%);
+}
+.features p {
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+}
+.features img {
+    float: right;
+}
+.team-builder {
+    grid-area: top;
+    border-top: solid 5px hsl(0, 78%, 62%);
+}
+.supervisor {
+    grid-area: left;
+    border-top: solid 5px hsl(180, 62%, 55%);
+}
+.calculator {
+    grid-area: right;
+    border-top: solid 5px hsl(212, 86%, 64%);
+}
+.karma {
+    grid-area: bottom;
+    border-top: solid 5px hsl(34, 97%, 64%);
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .title-section {
+        margin: 5%;
+        text-align: center;
+    }
+                      /*******first & last child******/
+    .title-section *, .title-section :nth-child(2n+1) {
+        margin: 0;
+        font-weight: 200;
+        color: hsl(229, 6%, 66%);
+    }
+    .title-section :nth-child(1) {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    .title-section :nth-child(2) {
+        font-weight: 600;
+        font-size: 25px;
+        color: hsl(234, 12%, 34%);
+    }
+    .title-section p {
+        margin-top: 20px !important;
+        font-size: 18px;    
+    }
+    
+
+    /* FEATURES */
+    .features {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0 10%;
+    }
+    .features > * {
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 3px 10px hsl(229, 6%, 66%);
+    }
+    .features p {
+        font-size: 15px;
+        color: hsl(229, 6%, 66%);
+    }
+    .features img {
+        float: right;
+    }
+    .team-builder {
+        order: 2;
+        border-top: solid 5px hsl(0, 78%, 62%);
+    }
+    .supervisor {
+        order: 1;
+        border-top: solid 5px hsl(180, 62%, 55%);
+    }
+    .calculator {
+        order: 4;
+        border-top: solid 5px hsl(212, 86%, 64%);
+    }
+    .karma {
+        order: 3;
+        border-top: solid 5px hsl(34, 97%, 64%);
+    }
+}
